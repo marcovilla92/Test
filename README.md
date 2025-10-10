@@ -19,3 +19,28 @@ Sito vetrina professionale per i servizi di riparazione e manutenzione di sorgen
 ## Come usare
 
 Apri `index.html` in un browser per visualizzare il sito. I link navigano fra le varie sezioni e pagine informative.
+
+## Raybox GUI
+
+Il file `raybox_gui.py` contiene l'interfaccia grafica aggiornata per gestire Raybox.
+
+### Come scaricarla su Windows
+
+1. Installa [Python 3.10 o superiore](https://www.python.org/downloads/windows/) assicurandoti di selezionare l'opzione **Add Python to PATH**.
+2. Scarica il progetto:
+   - Dal browser: clicca sul pulsante verde **Code** in alto a destra e scegli **Download ZIP**. Estrai l'archivio in una cartella, ad esempio `C:\RayboxGUI`.
+   - Oppure, se hai Git installato: `git clone https://github.com/<tuo-utente>/<nome-repo>.git`
+3. Apri il Prompt dei comandi nella cartella dove hai salvato i file (es. `cd C:\RayboxGUI`).
+4. Installa le dipendenze richieste: `pip install requests` (aggiungi `openpyxl` se vuoi l'esportazione Excel).
+5. Avvia l'applicazione con `python raybox_gui.py`.
+
+### Creare l'eseguibile Windows
+
+Per distribuire il programma come `.exe` eseguibile:
+
+1. Assicurati di essere su Windows e di aver installato le dipendenze precedenti.
+2. Installa PyInstaller: `pip install pyinstaller`.
+3. Esegui `python build_exe.py` dalla cartella del progetto.
+4. Al termine troverai `RayboxControlCenter.exe` dentro `dist/` pronto per essere copiato sui PC dei clienti.
+
+Lo storico dei task viene salvato nella cartella `%APPDATA%\RayboxControlCenter` (su Linux/macOS in `~/.config/RayboxControlCenter`).
